@@ -1,3 +1,7 @@
 {
-  "websiteURL": "https://qa-practical.qa.swimlane.io/login"
+  "websiteURL": "https://qa-practical.qa.swimlane.io/login",
+  "credentials": {
+    "username": "ruslan.sorochuk",
+    "password": "partytimeexcellent!"
+  }
 }
