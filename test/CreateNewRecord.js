@@ -7,6 +7,7 @@ const url = configObj.websiteURL;
 const browserToTestOn = process.env.npm_config_TestBrowser.toLowerCase(); //retrieving browser to run the test on from npm environment variable.
 let driver, loginButton, usernameField, passwordField, newEmployeeRecordIcon;
 
+/* All the locators for this page: */
 const locators = {
   /* Login Page */
   usernameField: By.id("input-1"),
@@ -40,7 +41,9 @@ const locators = {
     '//*[@ng-if="isNewRecord" and contains(text(),"New Record")]'
   ),
 };
+/* end of locators object */
 
+/* Test cases start here */
 describe("Sign in to Swimlane and add a record: ", function () {
   before(async function () {
     driver = await wdTools.launchBrowser(driver, browserToTestOn);
