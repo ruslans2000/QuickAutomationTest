@@ -1,8 +1,13 @@
 const fs = require("fs");
 
-function parseConfig() {
+/**
+ * Parses Json formatted config file
+ * @param {string} configFileDir - Config file location path.
+ * @return {Object} Returns JSON object.
+ */
+function parseConfig(configFileDir) {
   try {
-    const jsonString = fs.readFileSync("./config.json");
+    const jsonString = fs.readFileSync(configFileDir);
     return JSON.parse(jsonString);
   } catch (err) {
     console.log(err);

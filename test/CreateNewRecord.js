@@ -1,7 +1,7 @@
 const { By } = require("selenium-webdriver");
 var assert = require("assert");
 var wdTools = require("../tools/WebDriverTools");
-const configObj = require("../tools/utils").parseConfig();
+const configObj = require("../tools/utils").parseConfig("./config.json");
 
 const url = configObj.websiteURL;
 const browserToTestOn = process.env.npm_config_TestBrowser.toLowerCase(); //retrieving browser to run the test on from npm environment variable.
